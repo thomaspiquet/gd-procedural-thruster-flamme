@@ -1,8 +1,8 @@
 # MIT License
 # Copyright (c) 2023, Thomas Piquet
 
-extends Resource
 class_name FlammeSource
+extends Resource
 
 # Position of the source on the texture
 @export var position: Vector2i = Vector2i.ZERO
