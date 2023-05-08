@@ -194,13 +194,13 @@ func generate_texture() -> void:
 	self.material.set_shader_parameter("input_texture", texture)
 
 func onSizeChanged() -> void:
-			points.resize(size.x * size.y)
-			image = Image.create(size.x, size.y, false, Image.FORMAT_RGBA8)
-						
-			var texture = ImageTexture.new()
-			texture = texture.create_from_image(image)
-			
-			self.texture = texture
-		
-			$RayCast2D.position = Vector2(0, -size.y / 2)
-			$RayCast2D.target_position = Vector2(0, size.y) 
+	points.resize(size.x * size.y)
+	image = Image.create(size.x, size.y, false, Image.FORMAT_RGBA8)
+	
+	var texture = ImageTexture.new()
+	texture = texture.create_from_image(image)
+	
+	self.texture = texture
+	
+	$RayCast2D.position = Vector2(0, -size.y / 2)
+	$RayCast2D.target_position = Vector2(0, size.y) 
